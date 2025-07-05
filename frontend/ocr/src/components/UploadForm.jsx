@@ -8,7 +8,7 @@ function UploadForm({ onResult, onFileSelect }) {
     if (!file) return alert("Please select a PDF file.");
     const formData = new FormData();
     formData.append("file", file);
-    const res = await axios.post("http://127.0.0.1:5000/upload", formData);
+    const res = await axios.post("https://ocr-backend-1erv.onrender.com/upload", formData);
     onResult(res.data);
   };
 

@@ -7,8 +7,9 @@ services:
     startCommand: gunicorn app:app
     autoDeploy: true
 
-  - type: static
+  - type: web
     name: ocr-frontend
+    env: static
     rootDir: frontend/ocr
     buildCommand: npm install && npm run build
     staticPublishPath: dist
